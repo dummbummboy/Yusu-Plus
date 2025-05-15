@@ -30,7 +30,7 @@ public:
 private:
     /// room name can be alphanumeric and " " "_" "." and "-" and must have a size of 4-20
     QRegularExpression room_name_regex =
-        QRegularExpression(QStringLiteral("^[a-zA-Z0-9._ -]{4,20}"));
+		QRegularExpression(QStringLiteral("^[ -~]{4,20}$"));
     QRegularExpressionValidator room_name;
 
     /// nickname can be alphanumeric and " " "_" "." and "-" and must have a size of 4-20
